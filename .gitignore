@@ -1,0 +1,7 @@
+
+.idea/
+node_modules/
+dist
+*.log
+/docs/_book/
+uploader-server/uploads
