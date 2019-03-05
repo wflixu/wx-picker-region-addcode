@@ -5,8 +5,8 @@
   "main": "lib/index",
   "types": "lib/index",
   "scripts": {
-    "test": "node test.js",
-     "build":"tsc"
+    "test": "node ./test/test.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/wflixu/wx-picker-region-addcode#readme",
   "devDependencies": {
+    "@types/node": "^11.10.4",
     "typescript": "^3.3.3333"
   }
 }
