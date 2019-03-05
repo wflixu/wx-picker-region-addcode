@@ -9,7 +9,7 @@ function addCode(arr) {
     district_id: -1,
     address: ''
   };
-  const db = require('./data.js');
+  const db = require('./data.js/index.js');
   let curCollection = [];
 
   //查找省代码
