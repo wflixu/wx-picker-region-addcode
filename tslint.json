@@ -5,8 +5,10 @@
     ],
     "jsRules": {},
     "rules": {
-        "quotemark": [true, "single", "jsx-double"],
+        "quotemark": [false, "single", "jsx-double"],
         "object-literal-sort-keys": false,
+        "no-console": [false, "log", "error"],
+        "prefer-for-of": false,
         "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]
 
     },

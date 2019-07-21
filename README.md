@@ -12,11 +12,11 @@
 ```shell
 # 使用
  npm install wx-picker-region-addcode -S
- const utils = require('wx-picker-region-addcode');
+ const addCode = require('wx-picker-region-addcode');
 
 # test
  const mock =  ['陕西省', '西安市', '雁塔区'];
- const result = utils.addCode(mock);
+ const result = addCode(mock);
 # result => { province: '陕西省',
 #   province_id: '610000',
 #   city: '西安市',
@@ -25,6 +25,5 @@
 #   district_id: '610113',
 #   address: '陕西省西安市雁塔区' } 
  
-
 ```
 

@@ -1,22 +1,36 @@
-function addCode(arr: string[]) {
+interface IResult {
+  province: string;
+  province_id: string;
+  city: string;
+  city_id: string;
+  district: string;
+  district_id: string;
+  address: string;
+}
+function addCode(arr: string[]): IResult | null {
   //   var arr = ['陕西省', '西安市', '雁塔区'];
+  if (arr.length !== 3) {
+    console.warn(
+      "你必须输入长度3的字符串数组，如： ['陕西省', '西安市', '雁塔区']"
+    );
+    return null;
+  }
   const res = {
     province: arr[0],
-    province_id: '-1',
+    province_id: "-1",
     city: arr[1],
-    city_id: '-1',
+    city_id: "-1",
     district: arr[2],
-    district_id: '-1',
-    address: ''
+    district_id: "-1",
+    address: ""
   };
-  const db = require('./data');
+  const db = require("./data");
   let curCollection = [];
 
   // 查找省代码
   for (let i = 0; i < db.length; i++) {
-    // console.log(db[i].name)
     if (arr[0] === db[i].name) {
-      res.province_id = db[i].code + '0000';
+      res.province_id = db[i].code + "0000";
       curCollection = db[i].children;
       break;
     }
@@ -24,13 +38,13 @@ function addCode(arr: string[]) {
 
   // 直辖市判断
   if (arr[0] === arr[1]) {
-    res.city_id = curCollection[0].code + '00';
+    res.city_id = curCollection[0].code + "00";
     curCollection = curCollection[0].children;
   } else {
     // 查找市
     for (let j = 0; j < curCollection.length; j++) {
       if (arr[1] === curCollection[j].name) {
-        res.city_id = curCollection[j].code + '00';
+        res.city_id = curCollection[j].code + "00";
         curCollection = curCollection[j].children;
         break;
       }
@@ -45,13 +59,9 @@ function addCode(arr: string[]) {
     }
   }
   res.address += arr[0];
-  res.address += arr[0] === arr[1] ? '' : arr[1];
+  res.address += arr[0] === arr[1] ? "" : arr[1];
   res.address += arr[2];
   return res;
-
-  //
 }
 
-module.exports = {
-  addCode: addCode
-};
+module.exports = addCode;

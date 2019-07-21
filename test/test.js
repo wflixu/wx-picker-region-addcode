@@ -1,6 +1,6 @@
 
 // const utils = require('wx-picker-region-addcode');
-const utils = require('../lib/index.js');
+const addCode = require('../lib/index.js');
 
 console.log("测试开始\n");
 console.log('输入')

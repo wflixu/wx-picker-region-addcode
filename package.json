@@ -1,9 +1,9 @@
 {
   "name": "wx-picker-region-addcode",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "微信小程序中的地址选择器，结果市一个省市区的数组，在实际业务用，区划代码市和后台交互的识别码，需要省市区的区划编号，这个小模块，输入微信选择的结果，返回一个包含区划代码的对象",
-  "main": "lib/index",
-  "types": "lib/index",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "node ./test/test.js",
     "build": "tsc"
