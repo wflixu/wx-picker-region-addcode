@@ -13,9 +13,13 @@
     "url": "git+https://github.com/wflixu/wx-picker-region-addcode.git"
   },
   "keywords": [
-    "wx-mini-progrom",
+    "微信小程序",
+    "miniprogram",
+    "weixin",
     "picker",
-    "china",
+    "region",
+    "地区选择",
+    "wechat",
     "Administrative-code",
     "中国区划编码"
   ],
