@@ -4,6 +4,9 @@
   "description": "微信小程序中的地址选择器，结果市一个省市区的数组，在实际业务用，区划代码市和后台交互的识别码，需要省市区的区划编号，这个小模块，输入微信选择的结果，返回一个包含区划代码的对象",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "test": "node ./test/test.js",
     "build": "tsc"
@@ -32,5 +35,15 @@
   "devDependencies": {
     "@types/node": "^11.10.4",
     "typescript": "^3.3.3333"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "husky": "^3.0.9",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^2.0.0"
   }
 }
