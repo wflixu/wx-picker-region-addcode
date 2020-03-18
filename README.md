@@ -1,4 +1,4 @@
-# wx-picker-region-addcode
+# wx-picker-region-addcode  ![Node.js Package](https://github.com/wflixu/wx-picker-region-addcode/workflows/Node.js%20Package/badge.svg)
 
 
 功能:微信小程序picker组件 地区选择后的数据添加上中国的行政区划代码。
